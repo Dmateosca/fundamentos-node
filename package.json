@@ -1,0 +1,23 @@
+{
+  "name": "fundamentos-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmateosc",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Dmateosca/fundamentos-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dmateosca/fundamentos-node/issues"
+  },
+  "homepage": "https://github.com/Dmateosca/fundamentos-node#readme",
+  "description": ""
+}
