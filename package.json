@@ -8,8 +8,11 @@
   "author": "Dmateosc",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "estadisticas": "file:node_modules/estadisticas",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7"
   },
   "devDependencies": {},
   "repository": {
