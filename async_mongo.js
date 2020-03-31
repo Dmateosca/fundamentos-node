@@ -7,12 +7,36 @@ const dbName = 'curso';
 
 const connection = mongo.createConnection(url);
 
+
+const alumnoSchema = new mongo.Schema({
+    nombre: String,
+    edad : Number
+})
+
+alumnoSchema.methods.hola = function (){
+    const saludo = this.nombre
+    ? "Me llamo " + this.nombre
+    : "Aún no tengo nombre";
+    console.log(saludo);
+}
+
+const Alumno = mongo.model ('Alumno', alumnoSchema);
+
+
+const david = new Alumno({nombre: 'David', edad : 28})
+
+david.save(function(err,david){
+    if (err) return console.error(err);
+    david.hola();
+})
+
+
 connection
 .then(async function (client) { 
     const db = client.useDb(dbName);
     await insertDocuments(db, () => console.log("2-Insertados"));
     await findDocuments(db,() => console.log("4-Búsqueda finalizada"));
-    await deleteDocuments(db,() => console.log("6-Borrados"));
+   // await deleteDocuments(db,() => console.log("6-Borrados"));
     await findDocuments(db, () => console.log("8- fin búsqueda"));
     db.close();
 })
